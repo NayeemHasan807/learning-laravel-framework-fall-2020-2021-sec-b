@@ -29,9 +29,6 @@
 			<td>:</td>
 			<td>{{$students[0]['email']}}</td>
 		</tr>
-		<tr>
-
-		</tr>
 	</table>
 </body>
 </html>

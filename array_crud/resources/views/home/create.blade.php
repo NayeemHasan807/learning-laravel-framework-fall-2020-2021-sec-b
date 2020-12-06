@@ -14,19 +14,26 @@
 			</tr>
 			<tr>
 				<td>Name</td>
-				<td><input type="password" name="id"></td>
+				<td><input type="text" name="name"></td>
 			</tr>
 			<tr>
 				<td>CGPS</td>
-				<td><input type="text" name="cgps"></td>
+				<td><input type="text" name="cgpa"></td>
 			</tr>
 			<tr>
 				<td>Email</td>
 				<td><input type="text" name="email"></td>
 			</tr>
 			<tr>
-				<td></td>
+				<td>
+					<a href="/home">
+						<button type="button">
+							Back
+						</button>
+					</a>
+				</td>
 				<td><input type="submit" name="submit" value="Submit"></td>
+
 			</tr>
 		</table>
 		</fieldset>

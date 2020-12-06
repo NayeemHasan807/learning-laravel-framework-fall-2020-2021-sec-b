@@ -60,9 +60,10 @@ class homeController extends Controller
     	return view('home.create');
     }
 
-    public function insert(){
-    
-    	//return view('home.create');
+    public function insert(Request $req){
+    	$students = $this->getStudentlist();
+    	array_push($students,['id'=>$req->id,'name'=>$req->name,'cgpa'=>$req->cgpa,'email'=>$req->email]);
+    	return view('home.stdlist')->with('students', $students);
     }
 
     public function edit(){
