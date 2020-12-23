@@ -75,7 +75,7 @@ class adminController extends Controller
         } 
     }
 
-    public function update($id, employeeRequest $req){
+    public function update($id, Requests $req){
         if(session('type')=='Admin')
         {
             $employee = Employee::find($id);

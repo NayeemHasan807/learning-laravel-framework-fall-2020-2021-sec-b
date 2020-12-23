@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Create Job</title>
+	<title>Edit Job</title>
 </head>
 <body>
 	<form method="post">
 		<input type="hidden" name="_token" value="{{csrf_token()}}">
 		<fieldset>
-			<legend>Create Job</legend>
+			<legend>Edit Job</legend>
 		<table>
 			<tr>
 				<td>Company Name</td>
-				<td><input type="text" name="companyname" value="{{old('companyname')}}"></td>
+				<td><input type="text" name="companyname" value="{{$companyname}}"></td>
 			</tr>
 			<tr>
 				<td>Job Title</td>
-				<td><input type="text" name="jobtitle" value="{{old('jobtitle')}}"></td>
+				<td><input type="text" name="jobtitle" value="{{$jobtitle}}"></td>
 			</tr>
 			<tr>
 				<td>Job Location</td>
-				<td><input type="text" name="joblocation" value="{{old('joblocation')}}"></td>
+				<td><input type="text" name="joblocation" value="{{$joblocation}}"></td>
 			</tr>
 			<tr>
 				<td>Salary</td>
-				<td><input type="text" name="salary" value="{{old('salary')}}"></td>
+				<td><input type="text" name="salary" value="{{$salary}}"></td>
 			</tr>
 			<tr>
 				<td></td>
@@ -31,7 +31,7 @@
 					<input type="submit" name="submit" value="Submit">
 					 
 					<button>
-						<a href="{{route('employee.home')}}">
+						<a href="{{route('employee.joblist')}}">
 							Back
 						</a>
 					</button>
