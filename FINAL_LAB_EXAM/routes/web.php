@@ -27,7 +27,17 @@ Route::get('/logout', [logoutController::class,'index']);
 Route::group(['middleware'=>['session']], function(){
 
 	Route::get('/adminhome', [adminController::class,'adminhome'])->name('admin.home');
+	Route::get('/employeelist', [adminController::class,'employeelist'])->name('admin.employeelist');
+	Route::get('/createemployee', [adminController::class,'create'])->name('admin.createemployee');
+	Route::post('/createemployee', [adminController::class,'store']);
+	Route::get('/editemployee/{id}', [adminController::class,'edit'])->name('admin.editemployee');
+	Route::post('/editemployee/{id}', [adminController::class,'update']);
+	Route::get('/deleteemployee/{id}', [adminController::class,'delete'])->name('admin.deleteemployee');
+	Route::post('/deleteemployee/{id}', [adminController::class,'destroy']);
+	Route::get('/employeedetails/{id}', [adminController::class,'show'])->name('admin.employeedetails');
+
 	
 	Route::get('/employeehome', [employeeController::class,'employeehome'])->name('employee.home');
+
 
 });
