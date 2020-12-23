@@ -14,7 +14,7 @@
 				<td><input type="text" name="employeename" value="{{old('employeename')}}"></td>
 			</tr>
 			<tr>
-				<td>Contact No</td>
+				<td>Company Name</td>
 				<td><input type="text" name="companyname" value="{{old('companyname')}}"></td>
 			</tr>
 			<tr>
