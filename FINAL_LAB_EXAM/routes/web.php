@@ -39,7 +39,7 @@ Route::group(['middleware'=>['session']], function(){
 	Route::get('/employeehome', [employeeController::class,'employeehome'])->name('employee.home');
 	Route::get('/joblist', [employeeController::class,'employeelist'])->name('employee.joblist');
 	Route::get('/createjob', [employeeController::class,'create'])->name('employee.createjob');
-	Route::post('/createejob', [employeeController::class,'store']);
+	Route::post('/createjob', [employeeController::class,'store']);
 	Route::get('/editjob/{id}', [employeeController::class,'edit'])->name('employee.editjob');
 	Route::post('/editjob/{id}', [employeeController::class,'update']);
 	Route::get('/deletejob/{id}', [employeeController::class,'delete'])->name('employee.deletejob');
