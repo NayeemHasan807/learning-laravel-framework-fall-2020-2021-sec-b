@@ -95,7 +95,8 @@ class employeeController extends Controller
     public function delete($id){
         if(session('type')=='Employee')
         {
-           
+           $job = Job::find($id);
+           return view('employee.delete', $job);
         }
         else
         {
@@ -106,7 +107,10 @@ class employeeController extends Controller
     public function destroy($id){
         if(session('type')=='Employee')
         {
-            
+            $job = Job::find($id);
+            if($job->delete()){
+                return redirect()->route('employee.joblist');
+            }
         }
         else
         {
