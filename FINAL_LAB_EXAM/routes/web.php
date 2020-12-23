@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\loginController;
+use App\Http\Controllers\logoutController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    echo('Welcome to Job Portal');
 });
+
+Route::get('/login', [loginController::class,'index']);
+Route::post('/login', [loginController::class,'verify']);
+Route::get('/logout', [logoutController::class,'index']);
