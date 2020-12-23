@@ -27,7 +27,6 @@
 				<td>{{$employees[$i]['username']}}</td>
 				<td>
 					<a href="{{route('admin.editemployee', $employees[$i]['id'])}}">Edit </a> |
-					<a href="{{route('admin.employeedetails', $employees[$i]['id'])}}">Details </a> |
 					<a href="{{route('admin.deleteemployee', $employees[$i]['id'])}}">Delete </a> 
 				</td>
 			</tr>

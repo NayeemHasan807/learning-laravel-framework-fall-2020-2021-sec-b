@@ -34,9 +34,8 @@ Route::group(['middleware'=>['session']], function(){
 	Route::post('/editemployee/{id}', [adminController::class,'update']);
 	Route::get('/deleteemployee/{id}', [adminController::class,'delete'])->name('admin.deleteemployee');
 	Route::post('/deleteemployee/{id}', [adminController::class,'destroy']);
-	Route::get('/employeedetails/{id}', [adminController::class,'show'])->name('admin.employeedetails');
 
-	
+
 	Route::get('/employeehome', [employeeController::class,'employeehome'])->name('employee.home');
 
 
