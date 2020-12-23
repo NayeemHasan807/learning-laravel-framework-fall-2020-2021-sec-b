@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\logoutController;
+use App\Http\Controllers\adminController;
+use App\Http\Controllers\employeeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +23,11 @@ Route::get('/', function () {
 Route::get('/login', [loginController::class,'index']);
 Route::post('/login', [loginController::class,'verify']);
 Route::get('/logout', [logoutController::class,'index']);
+
+Route::group(['middleware'=>['session']], function(){
+
+	Route::get('/adminhome', [adminController::class,'adminhome'])->name('admin.home');
+	
+	Route::get('/employeehome', [employeeController::class,'employeehome'])->name('employee.home');
+
+});
